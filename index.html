@@ -8,8 +8,14 @@
 </head>
 
 <body>
+<video id="opening-video" width="100%" height="100%" autoplay>
+<source src="EDB 2_2.mp4">
+</video>
 
+
+<div id="story" style="height: 100%" hidden>
 <tw-story></tw-story>
+</div>
 
 <tw-storydata name="EDB" startnode="1" creator="Twine" creator-version="2.1.3" ifid="CD1BDF2D-74E7-4686-AEB3-F0AD426B97D3" format="Harlowe" format-version="2.0.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 
@@ -230,4 +236,9 @@ function c(n,r){return e(function(){t.storyElement.on(n.event+".enchantment","."
 
 
 </body>
+
+<script>
+$('#opening-video').on('ended',function(){ $(this).hide(); $('#story').show(); });
+</script>
+
 </html>
